@@ -1,4 +1,7 @@
 if __name__ == '__main__':
-    for i, number in enumerate(range(1, 10)):
-        if i % 2 == 0:
-            print(number)
+    numbers = [i for i in range(10)]
+    for i in range(len(numbers)):
+        if numbers[i] % 2 == 0:
+            continue
+        else:
+            print(numbers[i])
