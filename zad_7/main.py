@@ -5,7 +5,6 @@ import argparse
 
 
 def get_info(arg: str) -> None:
-    print(arg)
     if arg is not None:
         url = f"https://api.openbrewerydb.org/breweries?by_city={arg}"
         get_breweries(url)
