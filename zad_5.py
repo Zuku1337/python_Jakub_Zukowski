@@ -1,5 +1,5 @@
-def check_number_in_list(numbersMatrix: list, number: int) -> bool:
-    if number in numbersMatrix:
+def check_number_in_list(numbers_matrix: list, number: int) -> bool:
+    if number in numbers_matrix:
         return True
     return False
 
