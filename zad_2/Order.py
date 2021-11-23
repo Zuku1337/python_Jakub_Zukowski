@@ -6,7 +6,7 @@ class Order:
         self.books = books
         self.order_date = order_date
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"{self.employee} - Pracownik\n" \
                f"{self.student} - Student\n" \
                f"{self.books} - Książki\n" \

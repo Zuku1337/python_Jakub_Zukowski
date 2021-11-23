@@ -7,10 +7,10 @@ class Library:
         self.open_hours = open_hours
         self.phone = phone
 
-    def __str__(self):
-        return f"To jest klasa książka zawierająca obiekty:\n" \
-                f"{self.city} - Miasto zamieszkania\n" \
-                f"{self.street} - Ulica\n" \
-                f"{self.zip_code} - Kod pocztowy\n" \
+    def __str__(self) -> str:
+        return f"Klasa biblioteka - obiekty:\n" \
+               f"{self.city} - Miasto\n" \
+               f"{self.street} - Ulica\n" \
+               f"{self.zip_code} - Kod pocztowy\n" \
                f"{self.open_hours} - Godziny otwarcia\n" \
-                f"{self.phone} - Numer telefonu\n"
+               f"{self.phone} - Numer telefonu\n"

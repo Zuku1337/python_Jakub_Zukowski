@@ -7,8 +7,8 @@ class Book:
         self.author_surname = author_surname
         self.number_of_pages = number_of_pages
 
-    def __str__(self):
-        return f"To jest klasa książka zawierająca obiekty:\n" \
+    def __str__(self) -> str:
+        return f"Klasa książka - obiekty:\n" \
                f"{self.library} - Biblioteka\n" \
                f"{self.publication_date} - Data publikacji\n" \
                f"{self.author_name} - Imie autora\n" \
