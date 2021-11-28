@@ -10,7 +10,7 @@ class Odcinek:
         self._czy_czesto_stoi_polica = czy_czesto_stoi_policja
 
     def __str__(self) -> str:
-        return """Odcinek:\nDlugosc: {}\nNazwa: {}\n{}\nRoboty drogowe: {}\nCzy czesto stoi policja: {}\n"""\
+        return """Odcinek:\nDlugosc: {}\nNazwa: {}\n{}Roboty drogowe: {}\nCzy czesto stoi policja: {}"""\
             .format(self._dlugosc, self._nazwa, self._firma, self._roboty_drogowe, self._czy_czesto_stoi_polica)
 
     @property

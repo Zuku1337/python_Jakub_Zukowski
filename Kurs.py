@@ -11,7 +11,7 @@ class Kurs:
         self._czy_premier = czy_premier
 
     def __str__(self):
-        return """Kurs:\nCennik: {}\nOdcinek: {}\nPojazd: {}\nCzy VIP: {}\nCzy premier: {}"""\
+        return """\nKurs:\nCennik: {}\n{}\n{}\nCzy VIP: {}\nCzy premier: {}"""\
             .format(self._cennik, self._odcinek, self._pojazd, self._czy_vip, self._czy_premier)
 
     @property

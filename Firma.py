@@ -8,7 +8,7 @@ class Firma:
         self._uslugi = uslugi
 
     def __str__(self) -> str:
-        return """\nFirma:\nNazwa:{}\nSzef:{}\nAdres:{}\nKapital:{}\nUslugi:{}""" \
+        return """Nazwa:{}\nSzef:{}\nAdres:{}\nKapital:{}\nUslugi:{}""" \
             .format(self._nazwa, self._szef, self._adres, self._kapital, self._uslugi)
 
     @property
@@ -60,7 +60,7 @@ class FirmaTransportowa(Firma):
 
     def __str__(self) -> str:
         prefix = super().__str__()
-        return """{}\nMarka aut:{}\n""".format(prefix, self._marka_aut)
+        return """Firma Transportowa:\n{}\nMarka aut:{}\n""".format(prefix, self._marka_aut)
 
     @property
     def marka_aut(self) -> str:
@@ -79,7 +79,7 @@ class FirmaSpozywcza(Firma):
 
     def __str__(self) -> str:
         prefix = super().__str__()
-        return """{}\nSiec sklepow:{}\n""".format(prefix, self._siec_sklepow)
+        return """Firma Spozywcza:\n{}\nSiec sklepow:{}\n""".format(prefix, self._siec_sklepow)
 
     @property
     def siec_sklepow(self) -> str:
