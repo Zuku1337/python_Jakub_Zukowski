@@ -3,17 +3,16 @@ from Pojazd import Pojazd
 
 class Kurs:
 
-    def __init__(self) -> None:
-        self._cennik = None
-        self._odcinek = None
-        self._suma = None
-        self._pojazd = None
-        self._czy_vip = None
-        self._czy_premier = None
+    def __init__(self, cennik: float, odcinek: Odcinek, pojazd: Pojazd, czy_vip:bool, czy_premier: bool) -> None:
+        self._cennik = cennik
+        self._odcinek = odcinek
+        self._pojazd = pojazd
+        self._czy_vip = czy_vip
+        self._czy_premier = czy_premier
 
     def __str__(self):
-        return """Kurs:\nCennik: {}\nSuma: {}\nOdcinek: {}\nPojazd: {}\nCzy VIP: {}"""\
-            .format(self._cennik, self._suma, self._odcinek, self._pojazd, self._czy_vip)
+        return """Kurs:\nCennik: {}\nOdcinek: {}\nPojazd: {}\nCzy VIP: {}\nCzy premier: {}"""\
+            .format(self._cennik, self._odcinek, self._pojazd, self._czy_vip, self._czy_premier)
 
     @property
     def cennik(self) -> float:
@@ -40,12 +39,12 @@ class Kurs:
         self._odcinek = value
 
     @property
-    def pojazd(self) -> Pojazd.marka:
+    def pojazd(self) -> Pojazd:
         return self._pojazd
 
     @pojazd.setter
-    def pojazd(self) -> None:
-        self._pojazd = self.get_pojazd()
+    def pojazd(self, value: Pojazd) -> None:
+        self._pojazd = value
 
     @property
     def czy_vip(self) -> bool:
@@ -56,13 +55,7 @@ class Kurs:
         self._czy_vip = value
 
     def get_pojazd(self) -> Pojazd.marka:
-        return Pojazd.marka
+        return self.pojazd.marka
 
     def get_suma(self) -> float:
-        suma = 0
-        if isinstance(self.odcinek, list):
-            for i in self.odcinek.dlugosc:
-                suma += i * self.cennik
-        else:
-            suma += self.odcinek * self.cennik
-        return suma
+        return self.odcinek.dlugosc * self.cennik

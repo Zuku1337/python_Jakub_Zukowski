@@ -9,14 +9,12 @@ if __name__ == '__main__':
     pojazd1 = Pojazd("volkswagen", "Passat", 4, 500, False)
     odc1 = Odcinek(23.1, "Bytom-Kraków", firm1, False, True)
     odc2 = Odcinek(23.1, "Bytom-Kraków", firm1, False, True)
-    kurs1 = Kurs()
-    kurs1.odcinek = odc1
-    kurs1.cennik = 2.5
-    kurs1.pojazd = pojazd1
-    kurs1.czy_vip = True
-    kurs1.suma = kurs1.get_suma()
+    kurs1 = Kurs(2.5, odc1, pojazd1, True, False)
     print(firm1)
     print(firm2)
     print(pojazd1)
     print(odc1)
     print(kurs1)
+
+    print(kurs1.get_pojazd())
+    print(kurs1.get_suma())
