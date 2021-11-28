@@ -11,7 +11,7 @@ class Kurs:
         self._czy_premier = czy_premier
 
     def __str__(self):
-        return """\nKurs:\nCennik: {}\n{}\n{}\nCzy VIP: {}\nCzy premier: {}"""\
+        return """\nKurs:\nCennik: {}\n{}\n{}Czy VIP: {}\nCzy premier: {}"""\
             .format(self._cennik, self._odcinek, self._pojazd, self._czy_vip, self._czy_premier)
 
     @property
@@ -31,11 +31,11 @@ class Kurs:
         self._suma = self.get_suma()
 
     @property
-    def odcinek(self) -> Odcinek:
+    def odcinek(self) -> list:
         return self._odcinek
 
     @odcinek.setter
-    def odcinek(self, value: Odcinek) -> None:
+    def odcinek(self, value: list) -> None:
         self._odcinek = value
 
     @property
@@ -58,4 +58,9 @@ class Kurs:
         return self.pojazd.marka
 
     def get_suma(self) -> float:
-        return self.odcinek.dlugosc * self.cennik
+        suma = 0
+        odcinki = []
+        odcinki.append(self.odcinek)
+        for i in odcinki:
+            suma += i.dlugosc * self.cennik
+        return suma

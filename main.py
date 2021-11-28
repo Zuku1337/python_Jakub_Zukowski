@@ -15,5 +15,5 @@ if __name__ == '__main__':
     print(odc1)
     print(kurs1)
 
-    print(kurs1.get_pojazd())
-    print(kurs1.get_suma())
+    print(f"\nMarka pojazdu to: {kurs1.get_pojazd()}")
+    print(f"Suma za kurs to: {kurs1.get_suma()}")
