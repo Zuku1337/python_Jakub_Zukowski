@@ -10,7 +10,7 @@ class Kurs:
         self._czy_vip = czy_vip
         self._czy_premier = czy_premier
 
-    def __str__(self):
+    def __str__(self) -> str:
         return """\nKurs:\nCennik: {}\n{}\n{}Czy VIP: {}\nCzy premier: {}"""\
             .format(self._cennik, self._odcinek, self._pojazd, self._czy_vip, self._czy_premier)
 
