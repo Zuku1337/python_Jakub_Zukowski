@@ -8,7 +8,7 @@ class Firma:
         self._uslugi = uslugi
 
     def __str__(self) -> str:
-        return """Firma:\nNazwa:{}\nSzef:{}\nAdres:{}\nKapital:{}\nUslugi:{}""" \
+        return """\nFirma:\nNazwa:{}\nSzef:{}\nAdres:{}\nKapital:{}\nUslugi:{}""" \
             .format(self._nazwa, self._szef, self._adres, self._kapital, self._uslugi)
 
     @property
