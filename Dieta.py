@@ -1,16 +1,17 @@
 from Dietetyk import Dietetyk
 
+
 class Dieta:
 
-    def __init__(self, nazwa:str, koszt:float, dietetyk: Dietetyk, czy_gluten: bool) -> None:
+    def __init__(self, nazwa: str, koszt: float, dietetyk: Dietetyk, kalorycznosc: int) -> None:
         self._nazwa = nazwa
         self._koszt = koszt
         self._dietetyk = dietetyk
-        self._czy_gluten = czy_gluten
+        self._kalorycznosc = kalorycznosc
 
     def __str__(self) -> str:
-        """To jest klasa Dieta:\n Nazwa:{} \n Koszt: {} \n Polecający: {} \n Czy gluten: {}"""\
-            .format(self._nazwa, self._koszt, self._polecajacy, self._czy_gluten)
+        return """To jest klasa Dieta:\n Nazwa:{} \n Koszt: {} \n Polecający: {} \n Kalorycznosc: {}""" \
+            .format(self._nazwa, self._koszt, self._dietetyk, self._kalorycznosc)
 
     @property
     def nazwa(self) -> str:
@@ -25,6 +26,5 @@ class Dieta:
         return self._dietetyk
 
     @property
-    def czy_gluten(self) -> bool:
-        return self._czy_gluten
-
+    def kalorycznosc(self) -> int:
+        return self._kalorycznosc

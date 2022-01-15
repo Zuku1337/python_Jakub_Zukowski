@@ -9,7 +9,7 @@ class Dietetyk(Osoba):
         super().__init__(imie, nazwisko)
 
     def __str__(self) -> str:
-        """To jest klasa Dietetyk:\n Imie:{} \n Nazwisko: {} \n Doswiadczenie: {} \n Miejsce pracy: {}""" \
+        return """To jest klasa Dietetyk:\n Imie:{} \n Nazwisko: {} \n Doswiadczenie: {} \n Miejsce pracy: {}""" \
             .format(self._imie, self._nazwisko, self._doswiadczenie, self._miejsce_pracy)
 
     @property
